@@ -24,6 +24,7 @@
 		80AB032428CBAA8800B72ADC /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB032328CBAA8800B72ADC /* CalculateButton.swift */; };
 		80AB032628CBAE6700B72ADC /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB032528CBAE6700B72ADC /* Gender.swift */; };
 		80AB032828CBB1E600B72ADC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB032728CBB1E600B72ADC /* CircleView.swift */; };
+		80DF2A6A28D0D3A20028F4DF /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF2A6928D0D3A20028F4DF /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		80AB032328CBAA8800B72ADC /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
 		80AB032528CBAE6700B72ADC /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		80AB032728CBB1E600B72ADC /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		80DF2A6928D0D3A20028F4DF /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				80AB032528CBAE6700B72ADC /* Gender.swift */,
+				80DF2A6928D0D3A20028F4DF /* Calculator.swift */,
 			);
 			path = Functionality;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				80AB031628CBA92000B72ADC /* GenderCard.swift in Sources */,
 				80AB031228CBA74C00B72ADC /* BackgroundView.swift in Sources */,
 				80AB031E28CBA9FF00B72ADC /* ResultCard.swift in Sources */,
+				80DF2A6A28D0D3A20028F4DF /* Calculator.swift in Sources */,
 				80AB031828CBA98100B72ADC /* AgeCard.swift in Sources */,
 				80AB032828CBB1E600B72ADC /* CircleView.swift in Sources */,
 				80AB032628CBAE6700B72ADC /* Gender.swift in Sources */,

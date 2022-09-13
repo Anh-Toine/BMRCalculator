@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct SliderValue: View {
-	@State private var speed  = 50.0
-	@State private var isEditing = false
-    var body: some View {
-		Slider (
-			value: $speed,
-			in: 0...100,
-			onEditingChanged: {
-				editing in isEditing = editing
-			}
-		)
+	
+	@EnvironmentObject var calculator: Calculator
+	
+	var body: some View {
+		VStack{
+			CircleView(value: calculator.age)
+			Slider (value: $calculator.age, in: 15...80, step: 1.0)
+				.frame(width: 150)
+
+		}
     }
 }
 

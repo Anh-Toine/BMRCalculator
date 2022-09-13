@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CircleView: View {
-	var value: Int
+	
+	let value: Double
+	
     var body: some View {
-        Text(String(value))
+        Text(String(format: "%0.0f", value))
 			.font(.system(size: 30))
+			.fontWeight(.medium)
 			.foregroundColor(Color.white)
-			.fontWeight(.light)
-			.frame(width: 100, height: 100)
+			.frame(width: 80, height: 80)
 			.background(Color.blue)
 			.clipShape(Circle())
     }
@@ -22,6 +24,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-		CircleView(value: 0)
+		CircleView(value: 0.0)
     }
 }

@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct GenderCard: View {
-	@State private var selectedGender: Gender = .male
+	
+	@EnvironmentObject var calculator: Calculator
+	
     var body: some View {
-		NavigationView {
-			VStack {
 				ZStack {
 					BackgroundView()
 			
 					VStack {
+						
 						CardLabel(title: "Gender", caption: "Select Your Gender")
-						Picker("Gender", selection: $selectedGender) {
+						
+						Picker("Gender", selection: $calculator.gender) {
 							ForEach(Gender.allCases) {
 								gender in Text(gender.rawValue.capitalized)
 							}
-					}
-				.pickerStyle(.segmented)
-				.frame(width: 120)
+						}
+						.pickerStyle(.segmented)
+						.frame(width: 120)
 			}
 			
 		}
 		.frame(width: 300, height: 500)
-			}
-		}
     }
 }
 

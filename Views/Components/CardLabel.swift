@@ -11,16 +11,18 @@ struct CardLabel: View {
 	var title: String
 	var caption: String
     var body: some View {
-		Text(title)
-			.font(.title)
-			.fontWeight(.bold)
-			.foregroundColor(Color(.systemBlue))
-			.padding(.bottom, 10)
+		VStack{
+			Text(title)
+				.font(.title)
+				.fontWeight(.bold)
+				.foregroundColor(Color(.systemBlue))
+				.padding(.bottom, 10)
 		
-		Text(caption)
-			.font(.caption)
-			.foregroundColor(Color(.systemGray))
-			.padding(.bottom, 30)
+			Text(caption)
+				.font(.caption)
+				.foregroundColor(Color(.systemGray))
+				.padding(.bottom, 30)
+		}
     }
 }
 

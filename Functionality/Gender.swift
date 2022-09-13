@@ -8,8 +8,9 @@
 import SwiftUI
 
 enum Gender: String, CaseIterable, Identifiable {
-	case male, female
-	var id: Self { self }
+	case male
+	case female
+	var id: Self {self}
 }
 
 

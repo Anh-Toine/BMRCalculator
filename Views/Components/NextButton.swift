@@ -9,13 +9,11 @@ import SwiftUI
 
 struct NextButton: View {
     var body: some View {
-		Text("❯")
-			.font(.system(size: 30))
-			.foregroundColor(Color.white)
-			.fontWeight(.light)
-			.frame(width: 50, height: 50)
-			.background(Color.blue)
-			.clipShape(Circle())
+		Image(systemName: "chevron.right.circle.fill")
+			 .font(.title)
+			 .foregroundColor(Color(.systemBlue))
+			 .frame(height: 100)
+			 .padding(.top, 50)
     }
 }
 

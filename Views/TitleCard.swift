@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TitleCard: View {
     var body: some View {
-		NavigationView {
 			VStack{
 				ZStack {
 			
@@ -21,10 +20,6 @@ struct TitleCard: View {
 			}
 			.frame(width: 300, height: 500)
 			
-			NavigationLink(destination: GenderCard()) {
-				NextButton()
-			}
-			.padding()
 		}
     }
 }
@@ -34,4 +29,4 @@ struct TitleCard_Previews: PreviewProvider {
         TitleCard()
     }
 }
-}
+
