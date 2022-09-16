@@ -34,30 +34,16 @@ struct ContentView: View {
 			}
 			
 			if activeCardIndex == 4 {
-				CalculateButton()
-					.onTapGesture {
-						calculator.calculateBMR()
-						moveToNextCard()
-					}
+				CalculateButton(index: $activeCardIndex)
+					
 			} else {
-				NextButton()
-					.onTapGesture {
-						moveToNextCard()
-					}
+				NextButton(index: $activeCardIndex)
 			}
 			
 		}
 	}
 	
-	func moveToNextCard() {
-		withAnimation {
-			if (activeCardIndex <= 4) {
-				activeCardIndex += 1
-			} else {
-				activeCardIndex = 0
-			}
-		}
-	}
+	
 	struct ContentView_Previews: PreviewProvider {
 		static var previews: some View {
 			ContentView()
