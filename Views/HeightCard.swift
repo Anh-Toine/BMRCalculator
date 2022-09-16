@@ -14,7 +14,7 @@ struct HeightCard: View {
 			
 			VStack {
 				CardLabel(title: "Height", caption: "Enter Your Height (cm)")
-				SliderValue()
+				SliderValue(min: 4, max: 8, step: 0.1)
 			}
 		}
 		.frame(width: 300, height: 500)

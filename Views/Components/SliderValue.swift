@@ -10,11 +10,13 @@ import SwiftUI
 struct SliderValue: View {
 	
 	@EnvironmentObject var calculator: Calculator
-	
+	var min: Double
+	var max: Double
+	var step: Double
 	var body: some View {
 		VStack{
 			CircleView(value: calculator.age)
-			Slider (value: $calculator.age, in: 15...80, step: 1.0)
+			Slider (value: $calculator.age, in: min...max, step: step)
 				.frame(width: 150)
 
 		}
@@ -23,6 +25,6 @@ struct SliderValue: View {
 
 struct SliderValue_Previews: PreviewProvider {
     static var previews: some View {
-        SliderValue()
+		SliderValue(min: 0, max: 100, step: 1.0)
     }
 }

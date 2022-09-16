@@ -14,7 +14,7 @@ struct AgeCard: View {
 			
 			VStack {
 				CardLabel(title: "Age", caption: "Enter Your Age")
-				SliderValue()
+				SliderValue(min: 15, max: 80, step: 1.0)
 			}
 		}
 		.frame(width: 300, height: 500)

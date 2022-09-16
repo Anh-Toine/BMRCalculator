@@ -14,7 +14,7 @@ struct WeightCard: View {
 			
 			VStack {
 				CardLabel(title: "Weight", caption: "Enter Your Weight (kg)")
-				SliderValue()
+				SliderValue(min: 23, max: 66, step: 0.5)
 			}
 		}
 		.frame(width: 300, height: 500)
