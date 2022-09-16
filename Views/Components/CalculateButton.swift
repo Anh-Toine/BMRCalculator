@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct CalculateButton: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+	
+	@EnvironmentObject var calculator: Calculator
+    
+	var body: some View {
+        Text("CALCULATE")
+			.font(.caption2)
+			.fontWeight(.bold)
+			.padding(.all, 8)
+			.foregroundColor(Color(.white))
+			.background(Color(.systemBlue))
+			.cornerRadius(20)
+			.frame(height: 100)
+			.padding(.top, 50)
+			
     }
 }
 

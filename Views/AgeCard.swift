@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct AgeCard: View {
+	@EnvironmentObject var calculator: Calculator
     var body: some View {
 		ZStack {
 			BackgroundView()
 			
 			VStack {
 				CardLabel(title: "Age", caption: "Enter Your Age")
-				SliderValue(min: 15, max: 80, step: 1.0)
+				SliderValue(value: calculator.age)
+				Slider (value: $calculator.age, in: 15...80, step: 1)
+					.frame(width: 150)
 			}
 		}
 		.frame(width: 300, height: 500)

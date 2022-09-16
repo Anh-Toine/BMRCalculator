@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	@EnvironmentObject var calculator: Calculator
 	@State var activeCardIndex: Int = 0
-    var body: some View {
+	
+	var body: some View {
 		VStack {
 			Spacer()
 			
@@ -30,13 +33,22 @@ struct ContentView: View {
 				TitleCard()
 			}
 			
-			NextButton()
-				.onTapGesture {
-					moveToNextCard()
-				}
+			if activeCardIndex == 4 {
+				CalculateButton()
+					.onTapGesture {
+						calculator.calculateBMR()
+						moveToNextCard()
+					}
+			} else {
+				NextButton()
+					.onTapGesture {
+						moveToNextCard()
+					}
+			}
+			
 		}
-		
-    }
+	}
+	
 	func moveToNextCard() {
 		withAnimation {
 			if (activeCardIndex <= 4) {
@@ -46,10 +58,9 @@ struct ContentView: View {
 			}
 		}
 	}
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	struct ContentView_Previews: PreviewProvider {
+		static var previews: some View {
+			ContentView()
+		}
+	}
 }

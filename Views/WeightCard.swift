@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct WeightCard: View {
+	@EnvironmentObject var calculator: Calculator
     var body: some View {
 		ZStack {
 			BackgroundView()
 			
 			VStack {
 				CardLabel(title: "Weight", caption: "Enter Your Weight (kg)")
-				SliderValue(min: 23, max: 66, step: 0.5)
+				SliderValue(value: calculator.weight)
+				Slider (value: $calculator.weight, in: 30...80, step: 0.1)
+					.frame(width: 150)
 			}
 		}
 		.frame(width: 300, height: 500)

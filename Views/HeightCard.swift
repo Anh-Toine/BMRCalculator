@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct HeightCard: View {
+	@EnvironmentObject var calculator: Calculator
     var body: some View {
 		ZStack {
 			BackgroundView()
 			
 			VStack {
 				CardLabel(title: "Height", caption: "Enter Your Height (cm)")
-				SliderValue(min: 4, max: 8, step: 0.1)
+				SliderValue(value: calculator.height)
+				Slider (value: $calculator.height, in: 130...185, step: 0.1)
+					.frame(width: 150)
 			}
 		}
 		.frame(width: 300, height: 500)
